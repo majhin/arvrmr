@@ -1,0 +1,215 @@
+@font-face {
+	font-family: "FetteMitD";
+	src: url("/FetteMitD.otf") format("opentype");
+}
+
+.topRightButton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+video {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.circle1::before {
+	content: "Inhale 3 seconds";
+	text-align: center;
+	font-family: FetteMitD;
+	font-size: 18px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: textCircle1 1s forwards;
+	animation-delay: 2.8s;
+}
+
+.circle1::after {
+	content: "Exhale 3 seconds";
+	text-align: center;
+	font-family: FetteMitD;
+	font-size: 18px;
+	opacity: 0;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: textCircle 4s forwards;
+	animation-delay: 5.35s;
+}
+
+.circle2::before {
+	content: "Hold 2 seconds";
+	text-align: center;
+	font-family: FetteMitD;
+	font-size: 14px;
+	opacity: 0;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: textCircle 2.5s forwards;
+	animation-delay: 3s;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background-color: none; /* Change the color as needed */
+	border-radius: 50%;
+	border: 3px solid white;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.circle1 {
+	animation: breath1 8s; /* Adjust animation duration as needed */
+}
+
+.circle2 {
+	animation: breath2 6.5s;
+	animation-delay: 1s; /* Delay the animation by 1 second */
+}
+
+.circle3 {
+	animation: breath3 5.5s;
+	animation-delay: 2s; /* Delay the animation by 2 seconds */
+}
+
+@keyframes textCircle1 {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes textCircle {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	95% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes breath1 {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.8);
+	}
+	14% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	28% {
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	84% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	99% {
+		opacity: 0.1;
+		transform: translate(-50%, -50%) scale(0.1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
+
+@keyframes breath2 {
+	0% {
+		border: 2px solid white;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	17% {
+		border: 2px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.4);
+	}
+	34% {
+		border: 2px solid white;
+		opacity: 0.5;
+		transform: translate(-50%, -50%) scale(1.4);
+	}
+	69% {
+		border: 2px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.4);
+	}
+	82% {
+		border: 2px solid white;
+		opacity: 0.3;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		border: 2px solid white;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+@keyframes breath3 {
+	0% {
+		border: 1px solid white;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(1.6);
+	}
+	15% {
+		border: 1px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(2.2);
+	}
+	33% {
+		border: 1px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(2);
+	}
+	48% {
+		border: 1px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(2.2);
+	}
+	63% {
+		border: 1px solid white;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(2);
+	}
+	75% {
+		border: 1px solid white;
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(2.2);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+}
